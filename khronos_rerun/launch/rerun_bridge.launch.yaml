@@ -1,0 +1,14 @@
+---
+launch:
+  - arg: {name: recording_id, default: 'khronos'}
+  - arg: {name: spawn_viewer, default: 'true'}
+  - arg: {name: sim_time_required, default: 'true'}
+
+  - node:
+      pkg: khronos_rerun
+      exec: rerun_bridge
+      name: rerun_bridge
+      param:
+        - {name: use_sim_time, value: $(var sim_time_required)}
+        - {name: recording_id, value: $(var recording_id)}
+        - {name: spawn_viewer, value: $(var spawn_viewer)}
