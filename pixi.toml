@@ -1,0 +1,39 @@
+[workspace]
+authors = ["Juell Sprott <juell.sprott@student.uva.nl>"]
+name = "ros2_ws"
+platforms = ["linux-64"]
+version = "0.1.0"
+channels = ["https://prefix.dev/conda-forge", "https://prefix.dev/robostack-jazzy"]
+
+
+[target.unix.activation]
+# For activation scripts, we use bash for Unix-like systems
+scripts = ["install/setup.bash"]
+
+[target.unix.tasks]
+build = "colcon build --symlink-install --cmake-args -DCMAKE_PREFIX_PATH=$CONDA_PREFIX -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DBUILD_TESTING=OFF -DPython_FIND_VIRTUALENV=ONLY -DPython3_FIND_VIRTUALENV=ONLY"
+build_clean = "rm -rf build/ install/ log/ && colcon build --symlink-install --cmake-args -DCMAKE_PREFIX_PATH=$CONDA_PREFIX -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DBUILD_TESTING=OFF -DPython_FIND_VIRTUALENV=ONLY -DPython3_FIND_VIRTUALENV=ONLY"
+
+# Dependencies used by all environments
+[dependencies]
+python = "*"
+# Build tools
+compilers = "*"
+cmake = "*"
+pkg-config = "*"
+make = "*"
+ninja = "*"
+# ROS specific tools
+rosdep = "*"
+colcon-common-extensions = "*"
+ros-jazzy-desktop = "*"
+ros-jazzy-gtsam = ">=4.2.0,<5"
+glog = "<0.6.0"
+ros-jazzy-image-view = ">=5.0.11,<6"
+ros-jazzy-cv-bridge = "*"
+
+[pypi-dependencies]
+rerun-sdk = ">=0.21"
+
+[target.linux.dependencies]
+libgl-devel = "*"

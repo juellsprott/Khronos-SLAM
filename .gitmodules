@@ -1,33 +1,33 @@
 [submodule "config_utilities"]
-	path = config_utilities
+	path = khronos_slam/config_utilities
 	url = git@github.com:MIT-SPARK/config_utilities.git
 [submodule "teaser_plusplus"]
-	path = teaser_plusplus
+	path = khronos_slam/teaser_plusplus
 	url = git@github.com:MIT-SPARK/teaser_plusplus.git
 [submodule "spark_dsg"]
-	path = spark_dsg
+	path = khronos_slam/spark_dsg
 	url = git@github.com:MIT-SPARK/spark_dsg.git
 [submodule "kimera_pgmo"]
-	path = kimera_pgmo
+	path = khronos_slam/kimera_pgmo
 	url = git@github.com:MIT-SPARK/kimera_pgmo.git
 [submodule "pose_graph_tools"]
-	path = pose_graph_tools
+	path = khronos_slam/pose_graph_tools
 	url = git@github.com:MIT-SPARK/pose_graph_tools.git
 [submodule "semantic_inference"]
-	path = semantic_inference
+	path = khronos_slam/semantic_inference
 	url = git@github.com:MIT-SPARK/semantic_inference.git
 [submodule "spatial_hash"]
-	path = spatial_hash
+	path = khronos_slam/spatial_hash
 	url = git@github.com:MIT-SPARK/spatial_hash.git
 [submodule "hydra"]
-	path = hydra
+	path = khronos_slam/hydra
 	url = git@github.com:MIT-SPARK/hydra.git
 [submodule "hydra_ros"]
-	path = hydra_ros
+	path = khronos_slam/hydra_ros
 	url = git@github.com:MIT-SPARK/hydra_ros.git
 [submodule "kimera_rpgo"]
-	path = kimera_rpgo
+	path = khronos_slam/kimera_rpgo
 	url = git@github.com:MIT-SPARK/kimera_rpgo.git
 [submodule "ianvs"]
-	path = ianvs
+	path = khronos_slam/ianvs
 	url = git@github.com:MIT-SPARK/ianvs.git
