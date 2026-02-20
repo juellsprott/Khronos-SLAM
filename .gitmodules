@@ -1,33 +1,33 @@
-[submodule "config_utilities"]
+[submodule "khronos_slam/config_utilities"]
 	path = khronos_slam/config_utilities
 	url = git@github.com:MIT-SPARK/config_utilities.git
-[submodule "teaser_plusplus"]
+[submodule "khronos_slam/teaser_plusplus"]
 	path = khronos_slam/teaser_plusplus
-	url = git@github.com:MIT-SPARK/teaser_plusplus.git
-[submodule "spark_dsg"]
+	url = git@github.com:MIT-SPARK/TEASER-plusplus.git
+[submodule "khronos_slam/spark_dsg"]
 	path = khronos_slam/spark_dsg
-	url = git@github.com:MIT-SPARK/spark_dsg.git
-[submodule "kimera_pgmo"]
+	url = git@github.com:MIT-SPARK/Spark-DSG.git
+[submodule "khronos_slam/kimera_pgmo"]
 	path = khronos_slam/kimera_pgmo
-	url = git@github.com:MIT-SPARK/kimera_pgmo.git
-[submodule "pose_graph_tools"]
+	url = git@github.com:MIT-SPARK/Kimera-PGMO.git
+[submodule "khronos_slam/pose_graph_tools"]
 	path = khronos_slam/pose_graph_tools
 	url = git@github.com:MIT-SPARK/pose_graph_tools.git
-[submodule "semantic_inference"]
+[submodule "khronos_slam/semantic_inference"]
 	path = khronos_slam/semantic_inference
 	url = git@github.com:MIT-SPARK/semantic_inference.git
-[submodule "spatial_hash"]
+[submodule "khronos_slam/spatial_hash"]
 	path = khronos_slam/spatial_hash
-	url = git@github.com:MIT-SPARK/spatial_hash.git
-[submodule "hydra"]
+	url = git@github.com:MIT-SPARK/Spatial-Hash.git
+[submodule "khronos_slam/hydra"]
 	path = khronos_slam/hydra
-	url = git@github.com:MIT-SPARK/hydra.git
-[submodule "hydra_ros"]
+	url = git@github.com:MIT-SPARK/Hydra.git
+[submodule "khronos_slam/hydra_ros"]
 	path = khronos_slam/hydra_ros
-	url = git@github.com:MIT-SPARK/hydra_ros.git
-[submodule "kimera_rpgo"]
+	url = git@github.com:MIT-SPARK/Hydra-ROS.git
+[submodule "khronos_slam/kimera_rpgo"]
 	path = khronos_slam/kimera_rpgo
-	url = git@github.com:MIT-SPARK/kimera_rpgo.git
-[submodule "ianvs"]
+	url = git@github.com:MIT-SPARK/Kimera-RPGO.git
+[submodule "khronos_slam/ianvs"]
 	path = khronos_slam/ianvs
-	url = git@github.com:MIT-SPARK/ianvs.git
+	url = git@github.com:MIT-SPARK/Ianvs.git
