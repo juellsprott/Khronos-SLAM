@@ -14,9 +14,6 @@
 [submodule "khronos_slam/pose_graph_tools"]
 	path = khronos_slam/pose_graph_tools
 	url = git@github.com:MIT-SPARK/pose_graph_tools.git
-[submodule "khronos_slam/semantic_inference"]
-	path = khronos_slam/semantic_inference
-	url = git@github.com:MIT-SPARK/semantic_inference.git
 [submodule "khronos_slam/spatial_hash"]
 	path = khronos_slam/spatial_hash
 	url = git@github.com:MIT-SPARK/Spatial-Hash.git
