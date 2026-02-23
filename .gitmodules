@@ -10,6 +10,7 @@
 [submodule "khronos_slam/kimera_pgmo"]
 	path = khronos_slam/kimera_pgmo
 	url = git@github.com:MIT-SPARK/Kimera-PGMO.git
+	branch = ros2
 [submodule "khronos_slam/pose_graph_tools"]
 	path = khronos_slam/pose_graph_tools
 	url = git@github.com:MIT-SPARK/pose_graph_tools.git
@@ -28,6 +29,7 @@
 [submodule "khronos_slam/kimera_rpgo"]
 	path = khronos_slam/kimera_rpgo
 	url = git@github.com:MIT-SPARK/Kimera-RPGO.git
+	branch = develop
 [submodule "khronos_slam/ianvs"]
 	path = khronos_slam/ianvs
 	url = git@github.com:MIT-SPARK/Ianvs.git
