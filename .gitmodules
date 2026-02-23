@@ -30,6 +30,3 @@
 [submodule "khronos_slam/ianvs"]
 	path = khronos_slam/ianvs
 	url = git@github.com:MIT-SPARK/Ianvs.git
-[submodule "khronos_slam/--force"]
-	path = khronos_slam/--force
-	url = git@github.com:juellsprott/semantic_inference.git
