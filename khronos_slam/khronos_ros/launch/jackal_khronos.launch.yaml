@@ -10,8 +10,8 @@ launch:
   - arg: {name: log_vio, default: 'false'}
 
   # Semantics: Configure to use pre-recorded / Openset
-  - arg: {name: use_prerecorded_semantics, default: 'true'}
-  - arg: {name: use_openset_semantics, default: 'false'}
+  - arg: {name: use_prerecorded_semantics, default: 'false'}
+  - arg: {name: use_openset_semantics, default: 'true'}
   - arg: {name: use_gt_frame, default: 'false'}
 
   # Mapper configs

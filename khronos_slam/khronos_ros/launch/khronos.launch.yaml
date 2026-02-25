@@ -42,9 +42,9 @@ launch:
       remap:
         # Input remappings
         - { from: ~/input/left_cam/depth_registered/image_rect, to: $(var depth_topic) }
-        - { from: ~/input/left_cam/rgb/image_raw, to: $(var rgb_topic) }
-        - { from: ~/input/left_cam/rgb/image_raw/compressed, to: $(var rgb_topic)/compressed }
-        - { from: ~/input/left_cam/rgb/camera_info, to: $(var rgb_info_topic) }
+        - { from: ~/camera/daheng/left/image_rect, to: $(var rgb_topic) }
+        - { from: ~/camera/daheng/left/image_rect, to: $(var rgb_topic)/compressed }
+        - { from: ~/camera/daheng/left/camera_info, to: $(var rgb_info_topic) }
         - { from: ~/input/left_cam/semantic/image_raw, to: $(var label_topic) }
         - { from: ~/bow_vectors, to: /kimera_vio_ros/bow_query }
       args: >
