@@ -25,9 +25,21 @@ class RerunBridge(Node):
         # --- Parameters ---
         self.declare_parameter("recording_id", "khronos")
         self.declare_parameter("spawn_viewer", True)
+        self.declare_parameter("rgb_topic", "/camera/daheng/left/image_rect")
+        self.declare_parameter("depth_topic", "/camera/daheng/depth_image")
+        self.declare_parameter("label_topic", "/camera/daheng/left/image_seg")
+        self.declare_parameter("camera_info_topic", "/camera/daheng/left/camera_info")
+        self.declare_parameter("odom_topic", "/odom")
+        self.declare_parameter("imu_topic", "/imu")
 
         recording_id = self.get_parameter("recording_id").value
         spawn_viewer = self.get_parameter("spawn_viewer").value
+        rgb_topic = self.get_parameter("rgb_topic").value
+        depth_topic = self.get_parameter("depth_topic").value
+        label_topic = self.get_parameter("label_topic").value
+        camera_info_topic = self.get_parameter("camera_info_topic").value
+        odom_topic = self.get_parameter("odom_topic").value
+        imu_topic = self.get_parameter("imu_topic").value
 
         # --- Rerun init ---
         rr.init(recording_id)
@@ -68,32 +80,32 @@ class RerunBridge(Node):
 
         # RGB camera
         self.create_subscription(
-            Image, "/tesse/left_cam/rgb/image_raw", self._cb_rgb, sensor_qos
+            Image, rgb_topic, self._cb_rgb, sensor_qos
         )
 
         # Depth camera
         self.create_subscription(
-            Image, "/tesse/depth_cam/mono/image_raw", self._cb_depth, sensor_qos
+            Image, depth_topic, self._cb_depth, sensor_qos
         )
 
         # Semantic segmentation (ground truth labels)
         self.create_subscription(
             Image,
-            "/tesse/seg_cam/converted/image_raw",
+            label_topic,
             self._cb_segmentation,
             sensor_qos,
         )
 
         # Camera info (for pinhole model)
         self.create_subscription(
-            CameraInfo, "/tesse/left_cam/camera_info", self._cb_camera_info, sensor_qos
+            CameraInfo, camera_info_topic, self._cb_camera_info, sensor_qos
         )
 
         # Odometry
-        self.create_subscription(Odometry, "/tesse/odom", self._cb_odom, sensor_qos)
+        self.create_subscription(Odometry, odom_topic, self._cb_odom, sensor_qos)
 
         # IMU
-        self.create_subscription(Imu, "/tesse/imu/clean/imu", self._cb_imu, sensor_qos)
+        self.create_subscription(Imu, imu_topic, self._cb_imu, sensor_qos)
 
         # =====================================================================
         # Khronos visualisation outputs

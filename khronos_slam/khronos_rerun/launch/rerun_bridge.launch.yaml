@@ -3,6 +3,12 @@ launch:
   - arg: {name: recording_id, default: 'khronos'}
   - arg: {name: spawn_viewer, default: 'true'}
   - arg: {name: sim_time_required, default: 'true'}
+  - arg: {name: rgb_topic, default: '/camera/daheng/left/image_rect'}
+  - arg: {name: depth_topic, default: '/camera/daheng/depth_image'}
+  - arg: {name: label_topic, default: '/camera/daheng/left/image_seg'}
+  - arg: {name: camera_info_topic, default: '/camera/daheng/left/camera_info'}
+  - arg: {name: odom_topic, default: '/odom'}
+  - arg: {name: imu_topic, default: '/imu'}
 
   - node:
       pkg: khronos_rerun
@@ -12,3 +18,9 @@ launch:
         - {name: use_sim_time, value: $(var sim_time_required)}
         - {name: recording_id, value: $(var recording_id)}
         - {name: spawn_viewer, value: $(var spawn_viewer)}
+        - {name: rgb_topic, value: $(var rgb_topic)}
+        - {name: depth_topic, value: $(var depth_topic)}
+        - {name: label_topic, value: $(var label_topic)}
+        - {name: camera_info_topic, value: $(var camera_info_topic)}
+        - {name: odom_topic, value: $(var odom_topic)}
+        - {name: imu_topic, value: $(var imu_topic)}
